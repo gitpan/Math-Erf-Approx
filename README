@@ -3,26 +3,26 @@ NAME
     function
 
 DESCRIPTION
-    This is a pure Perl implementation of the error function (a.k.a. the
-    Gauss error function). It gives an approximation with a maximum absolute
+    This is a pure Perl implementation of the error function (a.k.a. the Gauss
+    error function). It gives an approximation with a maximum absolute
     difference of 0.0005 from the real value.
 
   Functions
-    This module can export two functions. Neither is exported by default.
-    This module uses Sub::Exporter, so the functions can be renamed:
+    This module can export two functions. Neither is exported by default. This
+    module uses Sub::Exporter, so the functions can be renamed:
 
      use Math::Erf::Approx -all => { -prefix => 'math_' };
 
-    "erf($x)"
+    `erf($x)`
         Calculates the result of the error function for value $x.
 
-    "erfc($x, \&erf)"
+    `erfc($x, \&erf)`
         Given a value $x and a code reference to an implementation of erf(),
         calculates the complement.
 
-        If the code reference is ommitted (which I'd expect would be the
-        most usual case), then the default is the "erf" function provided by
-        this module.
+        If the code reference is ommitted (which I'd expect would be the most
+        usual case), then the default is the `erf` function provided by this
+        module.
 
   Testing
     It is possible to run a small test suite on this module using:
@@ -31,8 +31,7 @@ DESCRIPTION
      Math::Erf::Approx->run_tests;
 
 BENCHMARKS
-    Benchmarking against Games::Go::Erf (on a fairly underpowered
-    netbook)...
+    Benchmarking against Games::Go::Erf (on a fairly underpowered netbook)...
 
      Benchmark: timing 100000 iterations of GGE, MEA...
        GGE:  6 wallclock secs ( 6.34 usr +  0.01 sys =  6.35 CPU) @ 15748.03/s (n=100000)
@@ -61,8 +60,8 @@ AUTHOR
 COPYRIGHT AND LICENCE
     This software is copyright (c) 2012 by Toby Inkster.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+    This is free software; you can redistribute it and/or modify it under the
+    same terms as the Perl 5 programming language system itself.
 
 DISCLAIMER OF WARRANTIES
     THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
